@@ -1,9 +1,9 @@
 # nbascore-slash-command
-NBA score slash command for MixMax
+NBA score slash command for Mixmax
 
 To run locally, run 'npm install' and 'npm start'
 
-https://localhost:9146/typeahead?text=la and https://localhost:9146/resolver?text=1610612747
+Test on: https://localhost:9146/typeahead?text=la and https://localhost:9146/resolver?text=1610612747
 
 # Features
 1. Drop-down menu of suggested teams from search term for autocomplete
