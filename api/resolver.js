@@ -1,4 +1,4 @@
-var NBA = require("nba");
+var NBA = require('nba');
 var moment = require('moment');
 var request = require('request');
 var _ = require('underscore');
@@ -12,7 +12,7 @@ module.exports = function lookUpGame(req, res) {
 		});
 	} catch(err) {
 		res.status(500).send('Error');
-      	return;
+		return;
 	} finally {
 		allScores.then(function(result) {
 			var selectedTeamGame = _.findWhere(result.lineScore, {

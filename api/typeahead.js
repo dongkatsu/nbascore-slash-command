@@ -1,8 +1,8 @@
-var NBA = require("nba");
+var NBA = require('nba');
 var request = require('request');
 var _ = require('underscore');
 
-module.exports = function(req, res) {
+module.exports = function findTeam(req, res) {
 	var searchTeam = req.query.text.trim();
 
 	// User left search term empty
@@ -17,8 +17,8 @@ module.exports = function(req, res) {
 	try {
 		var allTeams = NBA.stats.teamStats();
 	} catch (err) {
-      	res.status(500).send('Error');
-      	return;
+		res.status(500).send('Error');
+		return;
 	} finally {
 		allTeams.then(function(result) {
 			var suggestTeam = _.reject(result, function(team) {
